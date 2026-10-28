@@ -1,0 +1,50 @@
+Zaimplementowane są następujące cechy:
+
+  01 (trzy typy)
+  02 (literały, arytmetyka, porównania)
+  03 (zmienne, przypisanie)
+  04 (print)
+  05 (while, if)
+  06 (funkcje, rekurencja)
+  07 (przez zmienną / przez wartość)
+  09 (przesłanianie i statyczne wiązanie)
+  10 (obsługa błędów wykonania)
+  11 (funkcje zwracające wartość)
+// 12 (4) (statyczne typowanie)
+  13 (2) (funkcje zagnieżdżone ze statycznym wiązaniem)
+// 14 (2) (tablice wielowymiarowe przez wskaźnik)
+// 16 (1) (break, continue)
+
+Punkty: 29 - (4 + 2 + 1) = 22
+
+TypeChecker jest napisany jedynie częściowo (więc go nie załączyłem)
+zatem implementacja jest "dziurawa" ze względu na sprawdzanie typów.
+
+
+Proponowane cechy:
+
+Wszystkie punkty są dosyć standardowe, zapożyczone z innych języków,
+wyjaśnione na konsultacjach oraz w pdf ze specyfikacją zadania.
+Nie implementuję procedur, tylko funkcje, zatem punkty w specyfikacji zadania,
+w których mowa o procedurach/funkcjach, dotyczą jedynie funkcji.
+Jednak kilka dodatkowych wyjaśnień.
+
+7. Sposoby przekazywania parametrów to przez zmienną i przez wartość.
+
+9. Przesłanianie identyfikatorów ze statycznym ich wiązaniem (zagnieżdżone funkcje).
+Ten punkt mamy za darmo przez punkt 13.
+
+10. Obsługa błędów wykonania to będą elegancki komunikat i
+zatrzymanie interpretera. Błędy wykonania będą standardowe,
+typu dzielenie przez zero.
+
+Dodatkowe wyjaśnienia semantyki języka:
+- print() dostając bool, str czy int potrafi je wydrukować,
+- "+" dla str jest konkatenacją,
+- funkcja bez użytego return zwraca domyślną wartość dla jej typu (int -> 0, bool -> false, str -> ""),
+- return zmienia zwracaną wartość, natomiast nie wychodzi z funkcji,
+- przy definicji zmiennej należy wskazać wartość,
+- jeśli funkcja ma kilka argumentów o tej samej nazwie to zachowanie jest UB,
+- funkcje są widoczne po kolei, tak jak w C, zatem funkcje zdefiniowane po main() nie mogą zostać użyte,
+- żeby program był wykonywalny to należy zdefiniować funkcję main bez argumentów, o dowolnym zwracanym typie,
+- zmienne można redeklarować.

@@ -1,0 +1,3 @@
+packages: interpreter.cabal
+
+with-compiler: /home/mykhail0/.ghcup/bin/ghc
